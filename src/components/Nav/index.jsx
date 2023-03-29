@@ -1,11 +1,11 @@
 import React from "react";
 import Wrapper from "./style";
 
-export default function Nav() {
+export default function Nav({ local }) {
     const links = ["Sobre", "Carreiras", "Eventos", "Produtos", "Suporte"];
 
     return (
-        <Wrapper>
+        <Wrapper local={local}>
             <ul>
                 {links.map((link) => (
                     <li key={link}>

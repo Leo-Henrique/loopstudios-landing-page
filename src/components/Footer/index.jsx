@@ -1,5 +1,5 @@
 import React from "react";
-import { Wrapper, Logo, SocialNetwork, Copyright } from "./style";
+import { Wrapper, SocialNetwork, Copyright } from "./style";
 import Container from "../helpers/Container";
 import SVGLogo from "../../assets/icons/logo.svg";
 import SVGFacebook from "../../assets/icons/facebook.svg";
@@ -31,9 +31,9 @@ export default function Footer() {
     return (
         <Wrapper>
             <Container>
-                <Logo>
+                <div>
                     <SVGLogo />
-                </Logo>
+                </div>
 
                 <SocialNetwork>
                     {socialNetwork.map((item, index) => (
@@ -49,7 +49,7 @@ export default function Footer() {
                     ))}
                 </SocialNetwork>
 
-                <Nav />
+                <Nav local="footer"/>
 
                 <Copyright>
                     <p>

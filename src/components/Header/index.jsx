@@ -1,25 +1,29 @@
 import React from "react";
-import { Wrapper, Logo, Hamburger } from "./style";
+import { Wrapper, Hamburger } from "./style";
 import Container from "../helpers/Container";
 import SVGLogo from "../../assets/icons/logo.svg";
-import SVGHamburger from "../../assets/icons/hamburger.svg"
+import SVGHamburger from "../../assets/icons/hamburger.svg";
 import Nav from "../Nav";
 
-export default function Header() {
+const Header = React.forwardRef((props, ref) => {
     return (
-        <Wrapper>
+        <Wrapper ref={ref}>
             <Container>
-                <Logo>
+                <div>
                     <SVGLogo />
-                </Logo>
+                </div>
 
-                <Hamburger type="button"
-                aria-label="Abrir menu de navegação">
+                <Hamburger
+                    type="button"
+                    aria-label="Abrir menu de navegação"
+                >
                     <SVGHamburger />
                 </Hamburger>
 
-                <Nav />
+                <Nav local="header" />
             </Container>
         </Wrapper>
-    )
-}
+    );
+});
+
+export default Header;

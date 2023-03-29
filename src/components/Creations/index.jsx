@@ -1,5 +1,5 @@
 import React from "react";
-import { Wrapper, Intro, Collections } from "./style";
+import { Wrapper, SeeAll, Collections } from "./style";
 import Container from "../helpers/Container";
 import { H2, H3 } from "../helpers/Heading";
 import IMGDeepEarth from "../../assets/images/deep-earth.jpg";
@@ -67,11 +67,13 @@ export default function Creations() {
     return (
         <Wrapper>
             <Container>
-                <Intro>
-                    <H2>Nossas criações</H2>
+                <H2>Nossas criações</H2>
 
-                    <button type="button">Ver tudo</button>
-                </Intro>
+                <SeeAll>
+                    <button type="button">
+                        Ver tudo
+                    </button>
+                </SeeAll>
 
                 <Collections>
                     {collections.map((item) => (
@@ -86,6 +88,8 @@ export default function Creations() {
                                 </picture>
 
                                 <H3>{item.title}</H3>
+
+                                <div></div>
                             </a>
                         </li>
                     ))}

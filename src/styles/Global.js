@@ -14,6 +14,7 @@ const GlobalStyle = createGlobalStyle(({ theme }) => (css`
     h1, h2, h3, h4, h5, h6 {
         font-family: ${theme.fontFamilies[1]};
         font-weight: 300;
+        text-transform: uppercase;
     }
 `));
 
