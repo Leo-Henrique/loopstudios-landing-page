@@ -1,8 +1,10 @@
 import { breakpoints, desktop, animation } from "./mediaQueries";
+import * as mixins from "./mixins";
 
 const theme = {
     breakpoints: breakpoints(),
     media: { desktop, animation },
+    mixins,
     grid: {
         container: {
             default: "1320px",
