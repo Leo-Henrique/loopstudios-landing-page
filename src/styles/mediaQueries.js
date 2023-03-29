@@ -8,14 +8,15 @@ const sizes = {
     sm: "575.98px",
 }
 
-export const breakpoints = () => {
-    const obj = {};
+export const devices = {};
+Object.keys(sizes).forEach(breakpoint => {
+    devices[breakpoint] = `(${property}: ${sizes[breakpoint]})`;
+});
 
-    Object.keys(sizes).forEach(breakpoint => {
-        obj[breakpoint] = `${media} (${property}: ${sizes[breakpoint]})`;
-    });
-    return obj;
-}
+export const breakpoints = {};
+Object.keys(sizes).forEach(breakpoint => {
+    breakpoints[breakpoint] = `${media} (${property}: ${sizes[breakpoint]})`;
+});
 
 export const desktop = `${media} not all and (hover: none)`;
 export const animation = `${media} (prefers-reduced-motion: no-preference)`;

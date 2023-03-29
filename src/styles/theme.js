@@ -2,7 +2,7 @@ import { breakpoints, desktop, animation } from "./mediaQueries";
 import * as mixins from "./mixins";
 
 const theme = {
-    breakpoints: breakpoints(),
+    breakpoints,
     media: { desktop, animation },
     mixins,
     grid: {
@@ -14,13 +14,16 @@ const theme = {
             md: "540px",
             sm: "100%",
         },
-        gutter: 30,
+        gutter: "30px",
     },
-    fontFamilies: {
-        alata: "'Alata', sans-serif",
-        josefin: "'Josefin Sans', sans-serif",
-    },
+    fontFamilies: [
+        "'Alata', sans-serif",
+        "'Josefin Sans', sans-serif",
+    ],
     fontSizes: {
+        h1: "6.2rem",
+        h2: "4.8rem",
+        h3: "3.2rem",
         body: "1.8rem",
     },
     colors: {
