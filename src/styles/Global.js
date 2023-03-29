@@ -1,12 +1,16 @@
-import { createGlobalStyle } from "styled-components";
+import { css, createGlobalStyle } from "styled-components";
 import leoReset from "/node_modules/leo-reset.css/dist/leo-reset.css?inline";
-import typography from "./typography";
 
-const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle(({ theme }) => (css`
     ${leoReset};
+
     body {
-        ${typography};
+        font-size: ${theme.fontSizes.body};
+        line-height: 1.5;
+        font-weight: 300;
+        font-family: ${theme.fontFamilies.alata};
+        color: ${theme.colors.supportDark3};
     }
-`;
+`));
 
 export default GlobalStyle;

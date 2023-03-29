@@ -1,22 +1,8 @@
+import { breakpoints, desktop, animation } from "./mediaQueries";
+
 const theme = {
-    breakpoints: {
-        property: "max-width",
-        get xxl() {
-            return `(${this.property}: 1399.98px)`;
-        },
-        get xl() {
-            return `(${this.property}: 1199.98px)`;
-        },
-        get lg() {
-            return `(${this.property}: 991.98px)`;
-        },
-        get md() {
-            return `(${this.property}: 767.98px)`;
-        },
-        get sm() {
-            return `(${this.property}: 575.98px)`;
-        },
-    },
+    breakpoints: breakpoints(),
+    media: { desktop, animation },
     grid: {
         container: {
             default: "1320px",
@@ -26,11 +12,11 @@ const theme = {
             md: "540px",
             sm: "100%",
         },
-        gutter: "30px",
+        gutter: 30,
     },
     fontFamilies: {
-        alata: "'Alata', sans-serif;",
-        josefin: "'Josefin Sans', sans-serif;",
+        alata: "'Alata', sans-serif",
+        josefin: "'Josefin Sans', sans-serif",
     },
     fontSizes: {
         body: "1.8rem",
