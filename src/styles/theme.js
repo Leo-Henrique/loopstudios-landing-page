@@ -34,11 +34,11 @@ const theme = {
     },
     transitions: {
         global: {
-            duration: "300ms",
+            duration: 300,
             timingFunction: "ease-in-out",
         },
         button: {
-            duration: "200ms",
+            duration: 200,
             timingFunction: "ease-in-out",
         },
     },

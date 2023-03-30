@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 const paddingAnchorX = 1.5;
-const Wrapper = styled.nav(({ theme, local, headerHeight }) => (css`
+const Wrapper = styled.nav(({ theme, local, headerHeight, nav, navTransition }) => (css`
     ul {
         display: flex;
     }
@@ -17,7 +17,9 @@ const Wrapper = styled.nav(({ theme, local, headerHeight }) => (css`
             ${theme.mixins.link(paddingAnchorX / 2)};
         }
         ${theme.breakpoints.lg} {
-            display: none;
+            display: ${nav ? "block" : "none"};
+            opacity: ${navTransition ? 1 : 0};
+            transform: ${navTransition ? "none" : "translate3D(100px, 0, 0)"};
             width: 100%;
             height: 100%;
             position: fixed;
@@ -25,6 +27,7 @@ const Wrapper = styled.nav(({ theme, local, headerHeight }) => (css`
             z-index: ${theme.zIndex.nav};
             background-color: ${theme.colors.supportDark1};
             padding-top: calc(${`${headerHeight}px`} + 10rem);
+            ${theme.mixins.transition(["opacity", "transform"], "global")};
 
             ul {
                 flex-direction: column;

@@ -1,11 +1,11 @@
 import React from "react";
 import Wrapper from "./style";
 
-export default function Nav({ local, headerHeight}) {
+export default function Nav(props) {
     const links = ["Sobre", "Carreiras", "Eventos", "Produtos", "Suporte"];
 
     return (
-        <Wrapper local={local} headerHeight={headerHeight}>
+        <Wrapper {...props}>
             <ul>
                 {links.map((link) => (
                     <li key={link}>

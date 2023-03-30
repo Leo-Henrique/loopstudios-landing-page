@@ -3,7 +3,7 @@ import theme from "./theme";
 
 export const transition = (properties, type = "button") => (css`
     transition-property: ${properties.join(", ")};
-    transition-duration: ${theme.transitions[type].duration};
+    transition-duration: ${theme.transitions[type].duration}ms;
     transition-timing-function: ${theme.transitions[type].timingFunction};
 `);
 
@@ -38,7 +38,7 @@ export const link = (paddingX) => (css`
         }
         &:hover::after {
             opacity: 1;
-            width: calc(100% - ${`${paddingX * 2}rem`});
+            width: calc(100% - ${paddingX * 2}rem);
         }
     }
     &:active {
