@@ -10,6 +10,12 @@ const GlobalStyle = createGlobalStyle(({ theme }) => (css`
         font-weight: 300;
         font-family: ${theme.fontFamilies[0]};
         color: ${theme.colors.supportDark3};
+
+        &.hide-scrollbar {
+            position: fixed;
+            inset: 0;
+            overflow: hidden;
+        }
     }
     h1, h2, h3, h4, h5, h6 {
         font-family: ${theme.fontFamilies[1]};

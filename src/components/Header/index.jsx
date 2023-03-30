@@ -20,12 +20,14 @@ const Header = React.forwardRef(({ headerHeight }, ref) => {
 
             if (!nav) {
                 setNav(true);
+                document.body.classList.add("hide-scrollbar");
                 setTimeout(() => setNavTransition(true), 20);
                 setTimeout(() => btn.removeAttribute(transition), duration + 20);
             } else {
                 setNavTransition(false);
                 setTimeout(() => {
                     setNav(false);
+                    document.body.classList.remove("hide-scrollbar");
                     btn.removeAttribute(transition);
                 }, duration);
             }
