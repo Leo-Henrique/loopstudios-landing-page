@@ -84,7 +84,7 @@ export default function Creations() {
                                     media={devices.lg}
                                     type="image/jpg" />
 
-                                    <img src={item.img} alt={item.title} />
+                                    <img src={item.img} alt="" />
                                 </picture>
 
                                 <H3>{item.title}</H3>

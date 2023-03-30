@@ -11,18 +11,22 @@ import Nav from "../Nav";
 export default function Footer() {
     const socialNetwork = [
         {
+            label: "Facebook",
             url: "https://www.facebook.com/",
             icon: <SVGFacebook />,
         },
         {
+            label: "Twitter",
             url: "https://twitter.com/",
             icon: <SVGTwitter />,
         },
         {
+            label: "Pinterest",
             url: "https://br.pinterest.com/",
             icon: <SVGPinterest />,
         },
         {
+            label: "Instagram",
             url: "https://www.instagram.com/",
             icon: <SVGInstagram />,
         },
@@ -38,10 +42,11 @@ export default function Footer() {
                 <SocialNetwork>
                     {socialNetwork.map((item, index) => (
                         <li key={index}>
-                            <a
+                            <a 
                                 href={item.url}
                                 target="_blank"
                                 rel="external noopener noreferrer"
+                                aria-label={item.label}
                             >
                                 {item.icon}
                             </a>
