@@ -5,7 +5,7 @@ import SVGLogo from "../../assets/icons/logo.svg";
 import SVGHamburger from "../../assets/icons/hamburger.svg";
 import Nav from "../Nav";
 
-const Header = React.forwardRef((props, ref) => {
+const Header = React.forwardRef(({ headerHeight }, ref) => {
     return (
         <Wrapper ref={ref}>
             <Container>
@@ -20,7 +20,7 @@ const Header = React.forwardRef((props, ref) => {
                     <SVGHamburger />
                 </Hamburger>
 
-                <Nav local="header" />
+                <Nav local="header" headerHeight={headerHeight} />
             </Container>
         </Wrapper>
     );

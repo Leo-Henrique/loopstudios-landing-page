@@ -21,7 +21,8 @@ export default function Home() {
 
     return (
         <>
-            <Header ref={header} />
+            <Header ref={header} 
+            headerHeight={headerHeight} />
             <Main headerHeight={headerHeight}>
                 <div></div>
                 <Container>

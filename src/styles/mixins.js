@@ -24,7 +24,7 @@ export const link = (paddingX) => (css`
     position: relative;
     ${theme.mixins.transition(["opacity"])};
 
-    ${theme.mixins.desktop} {
+    ${theme.media.desktop} {
         &::after {
             content: "";
             display: block;

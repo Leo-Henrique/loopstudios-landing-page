@@ -44,6 +44,8 @@ const theme = {
     },
     zIndex: {
         header: 10,
+        nav: 20,
+        headerContent: 30,
     },
 };
 
