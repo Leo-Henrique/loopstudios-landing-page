@@ -35,8 +35,8 @@ const Header = React.forwardRef(({ headerHeight }, ref) => {
     };
 
     return (
-        <Wrapper ref={ref}>
-            <Container>
+        <Wrapper ref={ref} data-animate="fadeDown">
+            <Container >
                 <div>
                     <SVGLogo />
                 </div>

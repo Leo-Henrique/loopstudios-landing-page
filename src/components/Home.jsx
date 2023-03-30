@@ -6,6 +6,7 @@ import { H1 } from "./helpers/Heading";
 import Leader from "./Leader";
 import Creations from "./Creations";
 import Footer from "./Footer";
+import LeoAnimate from "leo-animate.js";
 
 export default function Home() {
     const header = React.useRef();
@@ -14,6 +15,7 @@ export default function Home() {
     React.useEffect(() => {
         const watch = () => setHeaderHeight(header.current.clientHeight);
         
+        new LeoAnimate();
         watch();
         window.addEventListener("resize", watch);
         return () => window.removeEventListener("resize", watch);
@@ -26,7 +28,7 @@ export default function Home() {
             <Main headerHeight={headerHeight}>
                 <div></div>
                 <Container>
-                    <H1>
+                    <H1 data-animate="fadeRight">
                         Experiências imersivas que entregamos
                     </H1>
                 </Container>

@@ -67,9 +67,9 @@ export default function Creations() {
     return (
         <Wrapper>
             <Container>
-                <H2>Nossas criações</H2>
+                <H2 data-animate="fadeDown">Nossas criações</H2>
 
-                <SeeAll>
+                <SeeAll data-animate="fadeDown">
                     <button type="button">
                         Ver tudo
                     </button>
@@ -77,7 +77,7 @@ export default function Creations() {
 
                 <Collections>
                     {collections.map((item) => (
-                        <li key={item.title}>
+                        <li key={item.title} data-animate="fadeDown">
                             <a href="#">
                                 <picture>
                                     <source srcSet={item.imgMobile}

@@ -10,23 +10,28 @@ export default function Leader() {
     return (
         <Wrapper>
             <Container>
-                <picture>
+                <picture data-animate
+                data-animate-lg="fadeDown">
                     <source
                         srcSet={IMGLeaderMobile}
                         media={devices.lg}
                         type="image/jpg"
                     />
 
-                    <img
+                    <img 
                         src={IMGLeader}
                         alt="Pessoa experimentando a realidade virtual com um VR"
                     />
                 </picture>
 
                 <Content>
-                    <H2>O líder em VR interativo</H2>
+                    <H2 data-animate="fadeLeft"
+                    data-animate-lg="fadeDown">
+                        O líder em VR interativo
+                    </H2>
 
-                    <p>
+                    <p data-animate="fadeLeft"
+                    data-animate-lg="fadeDown">
                         Fundada em 2011, a Loopstudios tem produzido
                         projetos de realidade virtual de classe mundial
                         para algumas das melhores empresas do mundo. Nossas
