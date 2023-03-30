@@ -48,7 +48,7 @@ export const Hamburger = styled.button(({ theme }) => (css`
 
 Os mixins é um conceito muito popular no SASS e algo de extrema eficácia para armazenar estilos reutilizáveis.
 
-Com a função `css`, os mixins podem ser criados e utilizados de modo muito parecido com o SASS, inclusive, utilizando argumentos e passando o tipo de dado que for mais convincente. Como eles ficam em um arquivo separado, decidi importa-los para o tema para facilitar o seu uso.
+Com a função `css`, os mixins podem ser criados e utilizados de modo muito parecido com o SASS, inclusive, utilizando argumentos e passando o tipo de dado que for mais convincente. Como eles ficam em um arquivo separado, eu importei eles para o tema para facilitar o seu uso.
 
 ```js
 export const transition = (properties, type = "button") => (css`
@@ -68,7 +68,7 @@ export const Hamburger = styled.button(({ theme }) => (css`
 
 A possibilidade de utilizar as `props` dentro dos estilos são, pelo menos pra mim, o grande potencial do styled-components.
 
-O trecho de código a seguir se refere a navegação do cabeçalho. Com as props, eu pude aplicar estilizações diferente dependendo do local onde a navegação se encontrava (cabeçalho ou rodapé) e animações com base em alguns estados (para quando o menu mobile é aberto ou fechado).
+O trecho de código a seguir se refere a navegação do cabeçalho. Com as props, eu pude aplicar estilizações diferentes dependendo do local onde a navegação se encontrava (cabeçalho ou rodapé) e animações com base em alguns estados (para quando o menu mobile é aberto ou fechado).
 
 ```js
 const Wrapper = styled.nav(({ 
